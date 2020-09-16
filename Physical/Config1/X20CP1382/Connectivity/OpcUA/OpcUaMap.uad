@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OpcUaSource FileVersion="7" ArVersion="C4.72">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <Task Name="opcua">
+        <Variable Name="counter">
+          <NodeDescription>
+            <DisplayName>What is this value</DisplayName>
+            <Description>Test Counter</Description>
+          </NodeDescription>
+        </Variable>
+        <Variable Name="andonlight" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

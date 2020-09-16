@@ -1,0 +1,4 @@
+VAR
+	andonlight : USINT;
+	counter : USINT;
+END_VAR

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<BR.AS.HardwareTopology Version="0.0.0.1">
+  <TimeStamps>
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="09/15/2020 19:53:19" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="X20BM31" Type="X20BM31" X="264" Y="100" />
+    <Module Name="X20SM1436_x" Type="X20SM1436" X="264" Y="100" />
+    <Module Name="X20TB12" Type="X20TB12" X="277" Y="126" />
+    <Module Name="X20BM31a" Type="X20BM31" X="290" Y="100" />
+    <Module Name="X20SM1436_y" Type="X20SM1436" X="290" Y="100" />
+    <Module Name="X20TB12a" Type="X20TB12" X="303" Y="126" />
+    <Module Name="X20CP1382" Type="X20CP1382" X="100" Y="100" />
+    <Module Name="X20IF1041_1" Type="X20IF1041-1" X="199" Y="100" />
+    <Module Name="X3" Type="X3" X="251" Y="103" />
+    <Module Name="X20TB1F2" Type="X20TB1F" X="251" Y="126" />
+    <Module Name="X2" Type="X2" X="238" Y="103" />
+    <Module Name="X20TB1F1" Type="X20TB1F" X="238" Y="126" />
+    <Module Name="X1" Type="X1" X="225" Y="103" />
+    <Module Name="X20TB1F" Type="X20TB1F" X="225" Y="126" />
+  </Modules>
+  <Links />
+  <InfoElements />
+</BR.AS.HardwareTopology>
