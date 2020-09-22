@@ -17,6 +17,14 @@
         </Variable>
         <Variable Name="andonlight" />
       </Task>
+      <Task Name="Stepper1">
+        <Variable Name="stepperMotor_x">
+          <Variable Name="motorGoal" />
+          <Variable Name="poseFeedback" />
+          <Variable Name="allowMovement" />
+          <Variable Name="errorCode" />
+        </Variable>
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

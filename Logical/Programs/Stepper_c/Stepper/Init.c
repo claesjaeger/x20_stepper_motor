@@ -5,8 +5,8 @@
 	#include <AsDefault.h>
 #endif
 
+#include <stepper.h>
 void _INIT ProgramInit(void)
 {
-	stepperMotor_x.MpAxis.MpLink = &stepper_x;
-
+	stepperProgramState.state = INIT;
 }

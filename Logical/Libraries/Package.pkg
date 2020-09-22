@@ -19,5 +19,6 @@
     <Object Type="Library" Language="binary" Description="This library contains functionality to execute traces (to sample numeric values periodically for a defined time-span)">CoTrace</Object>
     <Object Type="Library" Language="binary" Description="The AsZip library offers compressing archive-support">AsZip</Object>
     <Object Type="Library" Language="binary" Description="The FileIO library provides function blocks for file handling.">FileIO</Object>
+    <Object Type="Library" Language="binary" Description="The AsBrWStr library allows 8-bit character strings to be implemented for 16-bit WC (AsBrWStr) strings.">AsBrWStr</Object>
   </Objects>
 </Package>

@@ -1,8 +1,5 @@
 VAR
 	stepperMotor_y : stepperMotor;
 	stepperMotor_x : stepperMotor;
-	MpAxisStepper_y : MpAxisBasic;
-	MpAxisStepper_x : MpAxisBasic;
-	AxisParameterStepper_y : MpAxisBasicParType;
-	AxisParameterStepper_x : MpAxisBasicParType;
+	stepperProgramState : programState;
 END_VAR
