@@ -4,3 +4,4 @@
 #define OPERATION 	3
 #define ERROR 		4
 #define STOP 		5
+

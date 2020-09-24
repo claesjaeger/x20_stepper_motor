@@ -9,7 +9,6 @@ TYPE
 		poseFeedback : LREAL; (*Current position of the stepper*)
 		allowMovement : USINT;
 		errorCode : BYTE;
-		interface : STRING[80];
 		AxisParameter : MpAxisBasicParType;
 		MpAxis : MpAxisBasic;
 	END_STRUCT;

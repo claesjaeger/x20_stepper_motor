@@ -2,7 +2,7 @@
 <Configuration>
   <Element ID="stepper_x" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
-    <Selector ID="BaseType" Value="Linear">
+    <Selector ID="BaseType" Value="LinearBounded">
       <Property ID="MeasurementUnit" Value="5066068" />
       <Property ID="MeasurementResolutionIsReadOnly" Value="0" />
       <Property ID="MeasurementResolution" Value="0.01" />

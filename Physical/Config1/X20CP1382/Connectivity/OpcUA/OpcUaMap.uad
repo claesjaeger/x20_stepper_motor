@@ -24,6 +24,12 @@
           <Variable Name="allowMovement" />
           <Variable Name="errorCode" />
         </Variable>
+        <Variable Name="stepperMotor_y">
+          <Variable Name="motorGoal" />
+          <Variable Name="poseFeedback" />
+          <Variable Name="allowMovement" />
+          <Variable Name="errorCode" />
+        </Variable>
       </Task>
     </Module>
   </DefaultView>
