@@ -7,7 +7,7 @@ TYPE
 	stepperMotor : 	STRUCT 
 		motorGoal : LREAL; (*Position to move to*)
 		poseFeedback : LREAL; (*Current position of the stepper*)
-		allowMovement : USINT;
+		allowMovement : BOOL;
 		errorCode : BYTE;
 		AxisParameter : MpAxisBasicParType;
 		MpAxis : MpAxisBasic;
