@@ -4,19 +4,19 @@
   <OperatingSystem Version="C4.72"/>
   <Hardware Target="SG4"/>
   <Operation Delete="Stepper1.br"/>
-  <Operation Delete="mvLoader.br"/>
   <Operation Delete="CoTrace.br"/>
   <Operation Delete="brsystem.br"/>
   <Operation Delete="McStpAx.br"/>
+  <Operation Delete="mvLoader.br"/>
   <Operation Delete="MpAxis.br"/>
   <Operation Delete="arflatprv.br"/>
   <Operation Delete="arcoal.br"/>
-  <Operation Delete="arssl.br"/>
   <Operation Delete="AsZip.br"/>
   <Operation Delete="asioacc.br"/>
   <Operation Delete="asio.br"/>
   <Operation Delete="MpBase.br"/>
   <Operation Delete="sys_lib.br"/>
+  <Operation Delete="arssl.br"/>
   <Operation Delete="mcprofgen.br"/>
   <Operation Delete="McAcpAx.br"/>
   <Operation Delete="McAcpDrv.br"/>
@@ -30,8 +30,8 @@
   <Operation Download="arconfig.br" Memory="SystemROM"/>
   <Operation Download="sysconf.br" Memory="SystemROM"/>
   <Operation Restart="warm"/>
-  <Operation Download="NcGlobal.br" Memory="UserROM"/>
   <Operation Download="McAcpSim.br" Memory="UserROM"/>
+  <Operation Download="NcGlobal.br" Memory="UserROM"/>
   <Operation Download="powerlnk.br" Memory="UserROM"/>
   <Operation Download="arsvcreg.br" Memory="UserROM"/>
   <Operation Download="McBase.br" Memory="UserROM"/>
@@ -44,32 +44,32 @@
   <Operation Download="McAcpSys.br" Memory="UserROM"/>
   <Operation Restart="warm"/>
   <Operation Download="mcprofgen.br" Memory="UserROM"/>
+  <Operation Download="arssl.br" Memory="UserROM"/>
   <Operation Download="sys_lib.br" Memory="UserROM"/>
   <Operation Download="MpBase.br" Memory="UserROM"/>
   <Operation Download="asio.br" Memory="UserROM"/>
   <Operation Download="asioacc.br" Memory="UserROM"/>
   <Operation Download="AsZip.br" Memory="UserROM"/>
-  <Operation Download="arssl.br" Memory="UserROM"/>
   <Operation Download="arcoal.br" Memory="UserROM"/>
   <Operation Download="arflatprv.br" Memory="UserROM"/>
   <Operation Download="AsBrStr.br" Memory="UserROM"/>
   <Operation Download="MpAxis.br" Memory="UserROM"/>
+  <Operation Download="TCLang.br" Memory="UserROM"/>
+  <Operation Download="udbdef.br" Memory="UserROM"/>
+  <Operation Download="FWRules.br" Memory="UserROM"/>
+  <Operation Download="mvLoader.br" Memory="UserROM"/>
+  <Operation Download="mCoWebSc.br" Memory="UserROM"/>
+  <Operation Download="TCData.br" Memory="SystemROM"/>
+  <Operation Download="iomap.br" Memory="UserROM"/>
+  <Operation Download="Settings.br" Memory="UserROM"/>
+  <Operation Download="Role.br" Memory="UserROM"/>
+  <Operation Download="Config_1.br" Memory="UserROM"/>
+  <Operation Download="User.br" Memory="UserROM"/>
+  <Operation Download="ashwac.br" Memory="UserROM"/>
   <Operation Download="McStpAx.br" Memory="UserROM"/>
   <Operation Download="brsystem.br" Memory="UserROM"/>
   <Operation Download="CoTrace.br" Memory="UserROM"/>
   <Operation Download="AsBrWStr.br" Memory="UserROM"/>
-  <Operation Download="ashwac.br" Memory="UserROM"/>
-  <Operation Download="Config_1.br" Memory="UserROM"/>
-  <Operation Download="FWRules.br" Memory="UserROM"/>
-  <Operation Download="iomap.br" Memory="UserROM"/>
-  <Operation Download="mCoWebSc.br" Memory="UserROM"/>
-  <Operation Download="mvLoader.br" Memory="UserROM"/>
-  <Operation Download="Role.br" Memory="UserROM"/>
-  <Operation Download="Settings.br" Memory="UserROM"/>
-  <Operation Download="TCData.br" Memory="SystemROM"/>
-  <Operation Download="TCLang.br" Memory="UserROM"/>
-  <Operation Download="udbdef.br" Memory="UserROM"/>
-  <Operation Download="User.br" Memory="UserROM"/>
-  <Operation Download="opcua.br" Memory="UserROM"/>
   <Operation Download="Stepper1.br" Memory="UserROM"/>
+  <Operation Download="opcua.br" Memory="UserROM"/>
 </Transfer>

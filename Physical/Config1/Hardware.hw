@@ -36,6 +36,7 @@
     <Parameter ID="Cyclic1Duration" Value="2000" />
     <Parameter ID="Cyclic1Tolerance" Value="0" />
     <Parameter ID="Cyclic1Output" Value="1" />
+    <Parameter ID="Cyclic3Duration" Value="10000" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>

@@ -56,19 +56,6 @@ void _CYCLIC ProgramCyclic(void)
 			stepperMotor_x.MpAxis.MoveAbsolute = stepperMotor_x.allowMovement;
 			stepperMotor_y.MpAxis.MoveAbsolute = stepperMotor_y.allowMovement;
 			
-			/*
-			if (stepperMotor_x.allowMovement && stepperMotor_y.allowMovement){
-				stepperMotor_x.MpAxis.MoveAbsolute = TRUE;
-				stepperMotor_y.MpAxis.MoveAbsolute = TRUE;
-				stepperMotor_x.allowMovement = FALSE;
-				stepperMotor_y.allowMovement = FALSE;
-			}
-				
-			if(stepperMotor_x.MpAxis.MoveDone && stepperMotor_y.MpAxis.MoveDone){
-				stepperMotor_x.MpAxis.MoveAbsolute = FALSE;
-				stepperMotor_y.MpAxis.MoveAbsolute = FALSE;
-			}*/
-
 			break;
 		case ERROR:
 			brsstrcpy(stepperProgramState.stateInfo,"Error");
