@@ -53,6 +53,10 @@ void _CYCLIC ProgramCyclic(void)
 			stepperMotor_x.AxisParameter.Position = stepperMotor_x.motorGoal;
 			stepperMotor_y.AxisParameter.Position = stepperMotor_y.motorGoal;
 			
+			stepperMotor_x.MpAxis.MoveAbsolute = stepperMotor_x.allowMovement;
+			stepperMotor_y.MpAxis.MoveAbsolute = stepperMotor_y.allowMovement;
+			
+			/*
 			if (stepperMotor_x.allowMovement && stepperMotor_y.allowMovement){
 				stepperMotor_x.MpAxis.MoveAbsolute = TRUE;
 				stepperMotor_y.MpAxis.MoveAbsolute = TRUE;
@@ -63,7 +67,7 @@ void _CYCLIC ProgramCyclic(void)
 			if(stepperMotor_x.MpAxis.MoveDone && stepperMotor_y.MpAxis.MoveDone){
 				stepperMotor_x.MpAxis.MoveAbsolute = FALSE;
 				stepperMotor_y.MpAxis.MoveAbsolute = FALSE;
-			}
+			}*/
 
 			break;
 		case ERROR:
