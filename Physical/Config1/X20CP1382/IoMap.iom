@@ -1,0 +1,5 @@
+VAR_CONFIG
+	::Stepper1:actPosition AT %IW."X20SM1436_y".ActPos01;
+	::Stepper1:counter AT %IW."X20SM1436_y".RefPulsePosCnt01;
+	::Stepper1:encoder AT %IW."X20SM1436_y".RefPulsePosEnc01;
+END_VAR

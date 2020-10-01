@@ -1,4 +1,4 @@
 VAR
+	heartbeat : DINT;
 	andonlight : USINT;
-	counter : USINT;
 END_VAR

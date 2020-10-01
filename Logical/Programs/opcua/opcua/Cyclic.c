@@ -7,5 +7,6 @@
 
 void _CYCLIC ProgramCyclic(void)
 {
-	counter++;
+	heartbeat += 3;
 }
+

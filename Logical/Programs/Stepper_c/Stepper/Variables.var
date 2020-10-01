@@ -1,5 +1,11 @@
 VAR
+	homeReached : BOOL;
+	goHomeGoal : BOOL;
+	homeSwitch : BOOL;
+	stepperProgramState : programState;
 	stepperMotor_y : stepperMotor;
 	stepperMotor_x : stepperMotor;
-	stepperProgramState : programState;
+	encoder : INT;
+	counter : INT;
+	actPosition : INT;
 END_VAR

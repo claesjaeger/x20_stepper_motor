@@ -15,10 +15,16 @@ void _CYCLIC ProgramCyclic(void)
 			brsstrcpy(stepperProgramState.stateInfo,"Initialize stepper motor");
 			stepperMotor_x.MpAxis.MpLink = &stepper_x;
 			stepperMotor_x.MpAxis.Enable = 1;
+			stepperMotor_x.AxisParameter.Velocity = 3.0;
+			stepperMotor_x.AxisParameter.Acceleration = 8.0;
+			stepperMotor_x.AxisParameter.Deceleration = 8.0;
 			stepperMotor_x.MpAxis.Parameters = &stepperMotor_x.AxisParameter;
-			
+						
 			stepperMotor_y.MpAxis.MpLink = &stepper_y;
 			stepperMotor_y.MpAxis.Enable = 1;
+			stepperMotor_y.AxisParameter.Velocity = 3.0;
+			stepperMotor_y.AxisParameter.Acceleration = 8.0;
+			stepperMotor_y.AxisParameter.Deceleration = 8.0;
 			stepperMotor_y.MpAxis.Parameters = &stepperMotor_y.AxisParameter;
 			
 			stepperProgramState.state = POWERON;
@@ -39,8 +45,10 @@ void _CYCLIC ProgramCyclic(void)
 			//move motor y until limit switch is reached
 			
 			if(stepperMotor_x.MpAxis.PowerOn && stepperMotor_y.MpAxis.PowerOn){
-				stepperMotor_x.MpAxis.Home = TRUE; //remember to update this!!!!
-				stepperMotor_y.MpAxis.Home = TRUE; //remember to update this!!!!
+				//TODO: Move axis to home switch then:
+				stepperMotor_x.MpAxis.Home = TRUE; 
+				stepperMotor_y.MpAxis.Home = TRUE; 
+				homeReached = TRUE;
 				stepperProgramState.state = OPERATION;
 			}
 			break;
@@ -48,13 +56,33 @@ void _CYCLIC ProgramCyclic(void)
 		case OPERATION:
 			brsstrcpy(stepperProgramState.stateInfo,"Normal operation ready");
 			//send position feedback via OPC UA to ROS
+			// TODO: add a recalculation function to return valuea in world coordinate
 			stepperMotor_x.poseFeedback = stepperMotor_x.MpAxis.Position;
 			stepperMotor_y.poseFeedback = stepperMotor_y.MpAxis.Position;
-			stepperMotor_x.AxisParameter.Position = stepperMotor_x.motorGoal;
-			stepperMotor_y.AxisParameter.Position = stepperMotor_y.motorGoal;
 			
+			if(stepperMotor_x.MpAxis.Position != 0 || stepperMotor_y.MpAxis.Position != 0){
+				homeReached = FALSE;
+			}
+			
+			if(goHomeGoal) {
+				stepperMotor_x.AxisParameter.Position = 0;
+				stepperMotor_y.AxisParameter.Position = 0;
+				stepperMotor_x.motorGoal = 0;
+				stepperMotor_y.motorGoal = 0;
+			}
+			else {
+				//TODO: add recalculation function from world coordinate to gantry coordinate
+				stepperMotor_x.AxisParameter.Position = stepperMotor_x.motorGoal;
+				stepperMotor_y.AxisParameter.Position = stepperMotor_y.motorGoal;
+			}
+			
+			//Navigation stack lets robot move
 			stepperMotor_x.MpAxis.MoveAbsolute = stepperMotor_x.allowMovement;
 			stepperMotor_y.MpAxis.MoveAbsolute = stepperMotor_y.allowMovement;
+			
+			if(goHomeGoal && stepperMotor_x.MpAxis.Position == 0 && stepperMotor_y.MpAxis.Position == 0) {
+				homeReached = TRUE;
+			}
 			
 			break;
 		case ERROR:

@@ -7,6 +7,6 @@
 
 void _INIT ProgramInit(void)
 {
-	counter=0;
+	heartbeat=99;
 	andonlight=99;
 }

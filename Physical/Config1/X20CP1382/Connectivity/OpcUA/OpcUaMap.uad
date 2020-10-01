@@ -9,13 +9,8 @@
   <DefaultView>
     <Module Name="&lt;Default&gt;">
       <Task Name="opcua">
-        <Variable Name="counter">
-          <NodeDescription>
-            <DisplayName>What is this value</DisplayName>
-            <Description>Test Counter</Description>
-          </NodeDescription>
-        </Variable>
         <Variable Name="andonlight" />
+        <Variable Name="heartbeat" />
       </Task>
       <Task Name="Stepper1">
         <Variable Name="stepperMotor_x">
@@ -30,6 +25,9 @@
           <Variable Name="allowMovement" />
           <Variable Name="errorCode" />
         </Variable>
+        <Variable Name="goHomeGoal" />
+        <Variable Name="homeReached" />
+        <Variable Name="homeSwitch" />
       </Task>
     </Module>
   </DefaultView>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.7.3.93?>
+<?AutomationStudio Version=4.7.4.67?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
   <Module Name="X20BM31" Type="X20BM31" Version="1.0.0.1">
     <Connection Connector="X2X1" TargetModule="X20CP1382" TargetConnector="IF6" />
@@ -53,6 +53,7 @@
   <Module Name="X20SM1436_x" Type="X20SM1436" Version="2.2.0.0">
     <Connection Connector="SS1" TargetModule="X20TB12" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM31" TargetConnector="SL1" />
+    <Parameter ID="Supervision" Value="off" />
     <Parameter ID="ModuleParameters" Location="FunctionModel/DriveConfiguration" Value="StepperParameters" />
     <Parameter ID="McStepperTypeID" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="X20Config" />
     <Parameter ID="EncoderType" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="Incremental" />
@@ -66,6 +67,10 @@
     <Parameter ID="BrakeOutput" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="0" />
     <Parameter ID="NumberOfDigitalInputs" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="3" />
     <Parameter ID="NumberOfTriggers" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="InterfaceType" Location="FunctionModel/DriveConfiguration/Encoder/Encoder" Value="Incremental" />
+    <Parameter ID="LinesPerRevolution" Location="FunctionModel/DriveConfiguration/Encoder/Encoder/InterfaceType" Value="1024" />
+    <Parameter ID="ReferencePulseSource" Location="FunctionModel/DriveConfiguration/Encoder/Encoder/InterfaceType" Value="RInputOfABREncoder" />
+    <Parameter ID="ReferencePulseEdge" Location="FunctionModel/DriveConfiguration/Encoder/Encoder/InterfaceType" Value="PositiveEdge" />
     <Parameter ID="AxisReference" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="stepper_x" />
     <Parameter ID="InputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
     <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
@@ -74,7 +79,8 @@
     <Parameter ID="ReferenceDistanceIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
     <Parameter ID="ReferenceDistance" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
     <Parameter ID="SteppingAngle" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Motor" Value="1.8" />
-    <Parameter ID="EncoderLink" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NoEncoder" />
+    <Parameter ID="EncoderLink" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="OneEncoder" />
+    <Parameter ID="PositionEncoder" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink" Value="Encoder" />
     <Parameter ID="ModeIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="0" />
     <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="CurrentController" />
     <Parameter ID="StandstillCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.09" />
@@ -107,6 +113,7 @@
   <Module Name="X20SM1436_y" Type="X20SM1436" Version="2.2.0.0">
     <Connection Connector="SS1" TargetModule="X20TB12a" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM31a" TargetConnector="SL1" />
+    <Parameter ID="Supervision" Value="off" />
     <Parameter ID="ModuleParameters" Location="FunctionModel/DriveConfiguration" Value="StepperParameters" />
     <Parameter ID="McStepperTypeID" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="X20Config" />
     <Parameter ID="EncoderType" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="Incremental" />
@@ -120,6 +127,10 @@
     <Parameter ID="BrakeOutput" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="0" />
     <Parameter ID="NumberOfDigitalInputs" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="3" />
     <Parameter ID="NumberOfTriggers" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="InterfaceType" Location="FunctionModel/DriveConfiguration/Encoder/Encoder" Value="Incremental" />
+    <Parameter ID="LinesPerRevolution" Location="FunctionModel/DriveConfiguration/Encoder/Encoder/InterfaceType" Value="1024" />
+    <Parameter ID="ReferencePulseSource" Location="FunctionModel/DriveConfiguration/Encoder/Encoder/InterfaceType" Value="RInputOfABREncoder" />
+    <Parameter ID="ReferencePulseEdge" Location="FunctionModel/DriveConfiguration/Encoder/Encoder/InterfaceType" Value="PositiveEdge" />
     <Parameter ID="AxisReference" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="stepper_y" />
     <Parameter ID="InputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
     <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
@@ -128,7 +139,8 @@
     <Parameter ID="ReferenceDistanceIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
     <Parameter ID="ReferenceDistance" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
     <Parameter ID="SteppingAngle" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Motor" Value="1.8" />
-    <Parameter ID="EncoderLink" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NoEncoder" />
+    <Parameter ID="EncoderLink" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="OneEncoder" />
+    <Parameter ID="PositionEncoder" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink" Value="Encoder" />
     <Parameter ID="ModeIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="0" />
     <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="CurrentController" />
     <Parameter ID="StandstillCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.09" />
