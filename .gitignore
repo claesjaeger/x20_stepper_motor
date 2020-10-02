@@ -1,7 +1,7 @@
-as
-Diagnosis
-Binaries
-Temp
+as/
+Diagnosis/
+Binaries/
+Temp/
 *.set
 *.isopen
 Steppermotor_withx20.zip
